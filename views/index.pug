@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  .container
+    h1= title
+    .message-container
+      each val in messages
+        .message
+          h3= val.user
+          p= val.text
+          p= val.added
+    form(action="/new")
+      button#create-post(type="submit")= "Create Post"

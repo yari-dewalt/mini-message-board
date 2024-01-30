@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  form#new-post-form(method="POST" action="/new")
+    h2= "Add new message"
+    input#name-input(placeholder="Name" name="author" required=true)
+    input#message-input(placeholder="Message text" name="messageText" required=true)
+    button#submit-button(type="submit")= "Submit"
+    a#home-ref(href="/")= "Back Home"
